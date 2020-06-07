@@ -1,0 +1,11 @@
+1.【超応用】 プロフィールの更新履歴を保存する仕組みを作るにはどのようにしたらよいでしょうか
+   手順をまとめてみましょう。（どうしてもわからなからない場合はメンターに相談してみましょう。）
+   ⇨①Profile ModelとHistory Modelを関連付ける
+　  ②ProfileControllerのupdateActionでHistoryModelにも編集履歴を追加するよう実装する
+　  ③記録した変更履歴を編集画面で参照できるようにProfileのedit.blade.phpを編集する
+
+2.【超応用】 1. ができたら実際にプロフィールの更新履歴を保存する仕組みを作成してみましょう。
+　 ⇨コードを作成するも下記エラーが発生
+　  "SQLSTATE[HY000]: General error: 1364 Field 'news_id' doesn't have a default value 
+　  (SQL: insert into `histories` (`profile_id`, `edited_at`, `updated_at`, `created_at`) 
+　  values (1, 2020-06-07 00:38:33, 2020-06-07 00:38:33, 2020-06-07 00:38:33))
